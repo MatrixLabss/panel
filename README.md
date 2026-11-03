@@ -202,11 +202,11 @@ Feel free to contact the MatrixLabs development team.
 <img src="https://img.shields.io/badge/Support-support%40nyroxhub.bond-EA4335?style=for-the-badge&logo=gmail"/>
 </a></div>Developer: MatrixLabs
 
-Discord: "@matrixdevprog" (https://discord.com/users/1391705452240437290)
+Discord: [@matrixdevprog](https://discord.com/users/1391705452240437290)
 
-Official Community: "Matrix Discord" (https://discord.gg/CFMZNE6Ux)
+Official Community: [Matrix Discord](https://discord.gg/CFMZNE6Ux)
 
-Support: "support@nyroxhub.bond" (mailto:support@nyroxhub.bond)
+Support: [support@nyroxhub.bond](mailto:support@nyroxhub.bond)
 
 ---
 
