@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# Atyro Panel v1.0.0 installer
+# Matrix Panel v1.0.0 installer
 # Usage: bash install.sh [installation-directory]
 
 set -Eeuo pipefail
 
-REPO_URL="https://github.com/atyrolabs/panel.git"
-ZIP_NAME="atyro-panel-v1.0.0.zip"
+REPO_URL="https://github.com/MatrixLabss/panel.git"
+ZIP_NAME="matrixpanel-v1.0.0.zip"
 DEFAULT_DIR="/var/www/panel"
 
 # Orange-themed terminal UI
@@ -140,7 +140,7 @@ if [[ -e "$INSTALL_DIR" ]] && [[ -n "$(find "$INSTALL_DIR" -mindepth 1 -maxdepth
   [[ "$answer" =~ ^[Yy]$ ]] || { printf "Cancelled.\n"; exit 0; }
 fi
 
-WORK_DIR="$(mktemp -d -t atyro-panel-install.XXXXXX)"
+WORK_DIR="$(mktemp -d -t matrix-panel-install.XXXXXX)"
 trap cleanup EXIT
 
 step "Preparing installation directory"
@@ -148,7 +148,7 @@ mkdir -p -- "$INSTALL_DIR"
 INSTALL_DIR="$(cd "$INSTALL_DIR" && pwd)"
 ok "Target: $INSTALL_DIR"
 
-step "Cloning Atyro Labs repository"
+step "Cloning Matrix Labss repository"
 git clone --depth 1 "$REPO_URL" "$WORK_DIR/repository" >"$WORK_DIR/git.log" 2>&1 &
 pid=$!
 if spin "$pid" "Cloning repository..."; then
@@ -166,7 +166,7 @@ if [[ ! -f "$ZIP_PATH" ]]; then
   exit 1
 fi
 
-step "Extracting Atyro Panel v1.0.0"
+step "Extracting Matrix Panel v1.0.0"
 mkdir -p "$WORK_DIR/extracted"
 unzip -q "$ZIP_PATH" -d "$WORK_DIR/extracted" &
 pid=$!
@@ -244,7 +244,7 @@ esac
 
 umask 077
 cat > "$ENV_FILE" <<EOF
-# Atyro Panel v1.0.0 configuration
+# Matrix Panel v1.0.0 configuration
 PORT=$PORT
 HOST=$HOST
 NODE_ENV=$NODE_ENV
@@ -274,7 +274,7 @@ else
 fi
 
 printf "\n${GREEN}${BOLD}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${RESET}\n"
-printf "${GREEN}${BOLD}  ✔ ATYRO PANEL v1.0.0 INSTALLATION COMPLETE${RESET}\n"
+printf "${GREEN}${BOLD}  ✔ MATRIX PANEL v1.0.0 INSTALLATION COMPLETE${RESET}\n"
 printf "${GREEN}${BOLD}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${RESET}\n"
 printf "${WHITE}Install path:${RESET} %s\n" "$INSTALL_DIR"
 printf "${WHITE}Config file: ${RESET} %s\n" "$ENV_FILE"
