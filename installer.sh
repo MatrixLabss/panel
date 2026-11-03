@@ -5,7 +5,7 @@
 set -Eeuo pipefail
 
 REPO_URL="https://github.com/MatrixLabss/panel.git"
-ZIP_NAME="matrixpanel-v1.0.0.zip"
+ZIP_NAME="matrix-panel-v1.0.0.zip"
 DEFAULT_DIR="/var/www/panel"
 
 # Orange-themed terminal UI
